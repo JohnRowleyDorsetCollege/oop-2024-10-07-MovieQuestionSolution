@@ -4,7 +4,6 @@ using System.IO.Pipes;
 Console.WriteLine("Magic Eight Ball");
 
 string input = "";
-https://dorsetcollegedublin-my.sharepoint.com/:v:/g/personal/john_rowley_dorset_ie/EdUQ4TYVNPVAky8UaL2VShUBOn2DCpvxKeiwKJzdeNxoOA
 // https://pastebin.com/raw/7pB7EYUk
 List<string> listOfFortunes = new() {
                 "It is certain.",
@@ -48,6 +47,7 @@ while (true && !input.ToLower().Equals("stop"))
         Console.WriteLine($"You asked: {input} ");
         int result = randomGenerator.Next(0, listOfFortunes.Count());
 
+        // Convert to an array as it's easier to retreive by index position
         string answer = listOfFortunes.ToArray()[result];
 
         Console.WriteLine($"This is what I think: {answer}");
